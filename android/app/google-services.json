@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "969631501948",
+    "project_id": "edgf-378313",
+    "storage_bucket": "edgf-378313.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:969631501948:android:26950ff02e2020674343f9",
+        "android_client_info": {
+          "package_name": "com.kuchen.morgan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "969631501948-q9971jsqem43gv1ri8a14pb266mn67cf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABK4xVp39_JsS1U574j4gkxSvdF6xwpJI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "969631501948-q9971jsqem43gv1ri8a14pb266mn67cf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

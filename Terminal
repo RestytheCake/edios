@@ -1,0 +1,4 @@
+Add Flutter to Terminal
+export PATH="$PATH":"flutter/bin"
+Add Dart to Terminal
+export PATH="$PATH":"$HOME/.pub-cache/bin"
