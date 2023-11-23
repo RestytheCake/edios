@@ -34,7 +34,7 @@ class _profileWidget extends State<profileWidget>
         break;
       case 2:
         await GoogleSignInProvider().logout();
-        Get.to(const MyHomePage(title: "Text"));
+        Get.to(MyHomePage(PageN: 3,));
         break;
     }
   }

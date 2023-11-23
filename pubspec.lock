@@ -121,6 +121,38 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.17.2"
+  connectivity:
+    dependency: "direct main"
+    description:
+      name: connectivity
+      sha256: a8e91263cf3e25fb5cc95e19dfde4999e32a648ac3b9e8a558a28165731678f8
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.6"
+  connectivity_for_web:
+    dependency: transitive
+    description:
+      name: connectivity_for_web
+      sha256: "01a390c1d5adc2ed1fa1f52d120c07fe9fd01166a93f965a832fd6cfc0ea6482"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.4.0+1"
+  connectivity_macos:
+    dependency: transitive
+    description:
+      name: connectivity_macos
+      sha256: "51ae08d5162eca9669b9d8951ed83ce19c5355a81149f94e4dee2740beb93628"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.2.1+2"
+  connectivity_platform_interface:
+    dependency: transitive
+    description:
+      name: connectivity_platform_interface
+      sha256: "2d82e942df9d49f29a24bb07fb5ce085d4a53e47818c62364d2b6deb9e0d7a8e"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.1"
   convert:
     dependency: transitive
     description:
@@ -185,14 +217,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "7.0.0"
-  firebase:
-    dependency: transitive
-    description:
-      name: firebase
-      sha256: cbff777369d19bd0535ccca0005518172953394246620ff8c1021072299d452d
-      url: "https://pub.dev"
-    source: hosted
-    version: "9.0.3"
   firebase_auth:
     dependency: "direct main"
     description:
@@ -201,30 +225,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.14.0"
-  firebase_auth_oauth:
-    dependency: "direct main"
-    description:
-      name: firebase_auth_oauth
-      sha256: a9c94eca9dfa9550f88f62023f3f94a06236f8969df8457af061ceda4571d2a7
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.2.2"
-  firebase_auth_oauth_platform_interface:
-    dependency: transitive
-    description:
-      name: firebase_auth_oauth_platform_interface
-      sha256: "56a94d6b541c66190823f521feba7494bb0b4892b4495fceb813f72d45dc109c"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.3"
-  firebase_auth_oauth_web:
-    dependency: transitive
-    description:
-      name: firebase_auth_oauth_web
-      sha256: "45c995ac6aad9d32dfe6b0bba770ec243fb387b8625620ca2724d07f531f29a8"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.1.1"
   firebase_auth_platform_interface:
     dependency: transitive
     description:

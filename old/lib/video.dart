@@ -4,6 +4,7 @@ import 'package:edgermanflex/extra/link.dart';
 import 'package:edgermanflex/widgets/videoplayer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:morgan/widgets/videoplayer.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class video extends StatelessWidget {
@@ -451,7 +452,7 @@ class video extends StatelessWidget {
                                             tag: document['Id'],
                                             child: ClipRRect(
                                               borderRadius:
-                                                  new BorderRadius.circular(
+                                                  BorderRadius.circular(
                                                       30.0),
                                               child: CachedNetworkImage(
                                                 imageUrl: document['thumbnail'],
