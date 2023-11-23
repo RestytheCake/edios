@@ -3,6 +3,8 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:morgan/main.dart';
+import 'package:morgan/utils/Authentication.dart';
 import 'package:provider/provider.dart';
 
 import '../firebase/auth-service.dart';
@@ -43,9 +45,7 @@ class SignUpWidget extends StatelessWidget {
                 icon: const FaIcon(FontAwesomeIcons.google, color: Colors.red),
                 label: const Text("Login with Google"),
                 onPressed: () {
-                  final provider =
-                      Provider.of<GoogleSignInProvider>(context, listen: false);
-                  provider.googleLogin();
+                  Authentication.signInWithGoogle(context: context);
                 },
               ),
             ),
@@ -58,10 +58,15 @@ class SignUpWidget extends StatelessWidget {
                   minimumSize: const Size(double.infinity, 50),
                 ),
                 icon: const FaIcon(FontAwesomeIcons.microsoft, color: Colors.green),
-                label: const Text("Login with Microsoft"),
+                label: const Text("Login with Microsoft (google)"),
                 onPressed: () async {
-                  await performLogin(
-                      "microsoft.com", ["accesToken idToken"], {'lang': 'en'});
+                  await Authentication.signInWithGoogle(context: context);
+                  Navigator.push (
+                    context,
+                    MaterialPageRoute (
+                      builder: (BuildContext context) => MyHomePage(PageN: 3),
+                    ),
+                  );
                 },
               ),
             ),

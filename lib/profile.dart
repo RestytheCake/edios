@@ -9,6 +9,7 @@ import 'package:morgan/profile-page/profile_Forum.dart';
 import 'package:morgan/profile-page/profile_Friends+.dart';
 import 'package:morgan/settings.dart';
 import 'package:morgan/updates.dart';
+import 'package:morgan/utils/Authentication.dart';
 import 'package:shimmer/shimmer.dart';
 
 import 'firebase/auth-data.dart';
@@ -33,7 +34,7 @@ class _profileWidget extends State<profileWidget>
             context, MaterialPageRoute(builder: (context) => settings()));
         break;
       case 2:
-        await GoogleSignInProvider().logout();
+        await Authentication.signOut(context: context);
         Get.to(MyHomePage(PageN: 3,));
         break;
     }
@@ -74,7 +75,7 @@ class _profileWidget extends State<profileWidget>
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
               image: AssetImage("assets/images/patterndark.png"),
               fit: BoxFit.cover),
@@ -84,12 +85,12 @@ class _profileWidget extends State<profileWidget>
             Container(
                 width: deviceWidth,
                 decoration:
-                    BoxDecoration(color: Color.fromRGBO(70, 70, 70, 30)),
+                    const BoxDecoration(color: Color.fromRGBO(70, 70, 70, 30)),
                 child: Row(
                   // 1st part row
                   children: <Widget>[
                     Container(
-                        margin: EdgeInsets.fromLTRB(5, 15, 0, 13),
+                        margin: const EdgeInsets.fromLTRB(5, 15, 0, 13),
                         width: deviceWidth * 0.33,
                         alignment: Alignment.topCenter,
                         child: FutureBuilder(
@@ -135,7 +136,7 @@ class _profileWidget extends State<profileWidget>
                                             child: Text(
                                               snapshot.data['username']
                                                   .toString(),
-                                              style: TextStyle(
+                                              style: const TextStyle(
                                                   color: Colors.orange,
                                                   fontStyle: FontStyle.italic,
                                                   fontSize: 24),
@@ -156,7 +157,7 @@ class _profileWidget extends State<profileWidget>
                                               child: Text(
                                                 snapshot.data['username']
                                                     .toString(),
-                                                style: TextStyle(
+                                                style: const TextStyle(
                                                     fontStyle: FontStyle.italic,
                                                     fontSize: 24),
                                               ),
@@ -187,7 +188,7 @@ class _profileWidget extends State<profileWidget>
                                           },
                                           child: Text(
                                             snapshot.data.toString(),
-                                            style: TextStyle(
+                                            style: const TextStyle(
                                                 color: Colors.deepOrangeAccent,
                                                 fontSize: 20),
                                           ),
@@ -215,7 +216,7 @@ class _profileWidget extends State<profileWidget>
                                           },
                                           child: Text(
                                             'UID: ' + snapshot.data.toString(),
-                                            style: TextStyle(
+                                            style: const TextStyle(
                                                 color: Colors.black87,
                                                 fontSize: 12),
                                           ),
@@ -227,13 +228,13 @@ class _profileWidget extends State<profileWidget>
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.fromLTRB(0, 0, 5, 0),
+                      margin: const EdgeInsets.fromLTRB(0, 0, 5, 0),
                       child: PopupMenuButton<int>(
                         onSelected: (item) => handleClick(item),
                         itemBuilder: (context) => [
-                          PopupMenuItem<int>(value: 0, child: Text('Updates')),
-                          PopupMenuItem<int>(value: 1, child: Text('Settings')),
-                          PopupMenuItem<int>(value: 2, child: Text('Logout')),
+                          const PopupMenuItem<int>(value: 0, child: Text('Updates')),
+                          const PopupMenuItem<int>(value: 1, child: Text('Settings')),
+                          const PopupMenuItem<int>(value: 2, child: Text('Logout')),
                         ],
                       ),
                     ),

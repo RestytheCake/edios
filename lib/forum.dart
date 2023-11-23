@@ -142,7 +142,7 @@ class _forum extends State<forum> {
                                         Container(
                                             margin: const EdgeInsets.fromLTRB(
                                                 0, 5, 0, 0),
-                                            child: Row(
+                                            child:  Row(
                                               mainAxisAlignment:
                                                   MainAxisAlignment.center,
                                               children: [
@@ -152,7 +152,62 @@ class _forum extends State<forum> {
                                                       fontSize: 12,
                                                       color: Colors.black),
                                                 ),
-
+                                                GestureDetector(
+                                                    onTap:
+                                                        () => Navigator.push(
+                                                      context,
+                                                      MaterialPageRoute(
+                                                          builder:
+                                                              (context) =>
+                                                              UserProfileWidget(
+                                                                UserID: document['UID'],
+                                                              )),
+                                                    ),
+                                                    child: FutureBuilder(
+                                                      future:
+                                                      AuthID_Check_Premium(
+                                                          document[
+                                                          'UID']),
+                                                      builder: (BuildContext
+                                                      context,
+                                                          AsyncSnapshot<
+                                                              dynamic>
+                                                          snapshot) {
+                                                        if (snapshot.data[
+                                                        'premium'] ==
+                                                            false) {
+                                                          return Text(
+                                                            document['User']
+                                                                .toString(),
+                                                            style: TextStyle(
+                                                                color: Colors
+                                                                    .deepOrangeAccent,
+                                                                fontStyle:
+                                                                FontStyle
+                                                                    .italic,
+                                                                fontSize: 12),
+                                                          );
+                                                        } else {
+                                                          return Shimmer
+                                                              .fromColors(
+                                                            baseColor: Colors
+                                                                .deepOrangeAccent,
+                                                            highlightColor:
+                                                            Colors.white,
+                                                            child: Text(
+                                                              document['User']
+                                                                  .toString(),
+                                                              style: TextStyle(
+                                                                  fontStyle:
+                                                                  FontStyle
+                                                                      .italic,
+                                                                  fontSize:
+                                                                  12),
+                                                            ),
+                                                          );
+                                                        }
+                                                      },
+                                                    )),
                                               ],
                                             )), // User Name
                                         Container(

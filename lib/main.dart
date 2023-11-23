@@ -4,6 +4,7 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/src/snackbar/snackbar.dart';
 import 'package:morgan/service/service.dart';
+import 'package:morgan/utils/Authentication.dart';
 import 'extra/Internet.dart';
 import 'firebase/auth-data.dart';
 import 'firebase_options.dart';
@@ -18,7 +19,7 @@ import 'video.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-    await Firebase.initializeApp(
+  FirebaseApp firebaseApp = await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
   runApp(const MyApp());

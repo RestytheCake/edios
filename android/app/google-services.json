@@ -14,7 +14,15 @@
       },
       "oauth_client": [
         {
-          "client_id": "969631501948-q9971jsqem43gv1ri8a14pb266mn67cf.apps.googleusercontent.com",
+          "client_id": "969631501948-5cku5o9hlug8j33v2cjud4jffmtu0qdk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kuchen.morgan",
+            "certificate_hash": "dc3477b8492a93285cbb7cf0b1dd3d616fac7014"
+          }
+        },
+        {
+          "client_id": "969631501948-5i4ncbb16b1uignvtpua3rvkclpu9gqr.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -27,8 +35,15 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "969631501948-q9971jsqem43gv1ri8a14pb266mn67cf.apps.googleusercontent.com",
+              "client_id": "969631501948-5i4ncbb16b1uignvtpua3rvkclpu9gqr.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "969631501948-5t8lavmu5p0p40788m4ajne64q8ssu6i.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.kuchen.morgan.RunnerTests"
+              }
             }
           ]
         }
